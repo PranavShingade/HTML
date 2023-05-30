@@ -1,0 +1,62 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <title>
+            Addition    
+        </title>
+        <script>
+            function validateData(x)
+            {
+               var a = document.getElementById(x).value;
+               if( a=="" || isNaN(a))
+               {
+                return false;
+            }
+               else
+              {
+                return true;
+            }    
+
+            }
+
+
+           function validateNumbers()
+            {
+                var flag1=validateData("n1")
+                var flag2=validateData("n2")
+                if(flag1 && flag2)
+                {
+                    addNumbers();
+                }
+                
+                    
+
+
+            }   
+
+            function addNumbers()
+            {
+                var num1=parseInt(document.getElementById("n1").value);
+                var num2=parseInt( document.getElementById("n2").value  );
+               var Addition=num1+num2;
+
+                document.getElementById('rst').value=Addition;
+            }
+
+        </script>
+
+        
+    </head>
+    <body>
+        <form name="frm">
+            Number1: <input type="text" name="num1" id="n1"><br>
+            Number2: <input type="text" name="num2" id="n2"><br>
+            Result : <input type="text" name="result" id="rst" disabled><br>
+            <button type="button" name="btn" id="b1" onmouseover="validateNumbers()">Add Numbers</button>
+        </form> 
+    </body>
+</html>

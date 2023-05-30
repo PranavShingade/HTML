@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script>
+            var str=""
+           function validateData()
+            {
+                str=""
+                var count = 0;
+                var arr= document.getElementsByName("skill")
+                for(var i=0;i<arr.length;i++)
+                {
+                    if(arr[i].checked)
+                    {
+                        str += arr[i].value + ","
+                        count++;
+                    }
+                }
+                if(count>=2)
+                {
+                    document.getElementById("errskill").innerHTML=""
+                    str=str.slice(0,str.length-1)
+
+                    document.getElementById("mydiv").innerHTML=str;
+                    return true;
+                }
+                else{
+                    document.getElementById("errskill").innerHTML="plz enter more than one"
+                    return false;
+                }
+
+               
+               
+
+            }
+           
+            
+        </script>
+
+    </head>
+    <body>
+        <input type="checkbox" name="skill" id="java" value="java">
+        <label for="java">JAVA</label>
+        <input type="checkbox" name="skill" id="C++" value="C++">
+        <label for="C++">C++</label>
+        <input type="checkbox" name="skill" id="python" value="python">
+        <label for="python">PYTHON</label>
+        <input type="checkbox" name="skill" id="js" value="js">
+        <label for="js">JS</label>
+        <span id="errskill"></span><br><br>
+        <button type="button" name="btn" id="btn" onclick="validateData()">Show Skills</button>
+        <div id="mydiv"></div>
+    </body>
+</html>
