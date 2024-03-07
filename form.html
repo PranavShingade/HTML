@@ -1,0 +1,31 @@
+<head>
+    <title>Create Form</title>
+    <script>
+        function show()
+        {
+            var id= document.getElementById("1").value
+            var pass= document.getElementById("2").value
+            alert("Data Submit Successfully  "+"userId "+ id +"Password "+ pass)
+          
+        }
+    </script>
+    <style>
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; This ensures the container takes up the full viewport height */
+  }
+    </style>
+    <body>
+        
+        <div class="container">
+            <form > 
+                
+                <input type="text" placeholder="Enter UserId" id="1" ></input></br></br>
+                <input type="password" placeholder="Enter password" id="2"></input></br></br>
+                <button onclick="show()">Click me</button>
+            </form>
+        </div>
+    </body>
+</head>
